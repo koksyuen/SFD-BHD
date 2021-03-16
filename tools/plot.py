@@ -20,7 +20,8 @@ def plotter(stress_points, positions, diagram):
     plotting.xlabel('Position along length of the member ->')
     plotting.ylabel(diagram + ' ->')
 
+    my_path = '/content/pySA/image/'
     plotting.scatter(positions, stress_points)
     plotting.plot(positions, stress_points)
-    plotting.show()
+    fig.savefig(my_path + diagram + '.png')
 
